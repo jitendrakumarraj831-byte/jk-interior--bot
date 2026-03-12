@@ -10,9 +10,9 @@ PHONE_NUMBER_ID = "1071239746066018"
 VERIFY_TOKEN = "my_secret_token_123"
 
 def send_whatsapp_message(to, text):
-    url = f"https://graph.facebook.com/v18.0/{PHONE_NUMBER_ID}/messages"
+    url = f"https://graph.facebook.com/v18.0/{1071239746066018}/messages"
     headers = {
-        "Authorization": f"Bearer {ACCESS_TOKEN}",
+        "Authorization": f"Bearer {EAAMjzXE0bacBQ97288NzZAagkVZAYv1bHFvHHvJxpaLQMHfe14xwenhtjjyObrYNoSEeJQIGwTdEKPrs1JvS7OLaF7DNKlFQdn7E92WZBiC0ir0OvElf6zre9nyPehQJjh1LUN81yC0SjNEtXYTxeahAAjZCZBg0dtST2XYfvEbnUmVlgqLv7MN1XJZBcOKi1GmoXy047b73WlLGuLwihOsnSRdMmYfhRavbv06hs9roHpmwkSZBho4Jn3wtg6q8KvT44oQNLL3tZCBfEZCqw3zx5}",
         "Content-Type": "application/json"
     }
     data = {
