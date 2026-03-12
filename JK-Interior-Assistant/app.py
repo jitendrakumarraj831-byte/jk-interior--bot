@@ -6,7 +6,7 @@ from chatbot import get_bot_reply   # chatbot.py से reply function
 app = Flask(__name__)
 
 # ----- Meta WhatsApp Credentials -----
-ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"
+ACCESS_TOKEN = "EAAMjzXE0bacBQZCIcbZAJvaNuFVJlEVKMGUCxWA2bKXv314cXgF3ZCpJcIcxGWrZAAnFT0abFAP3Eghwr3MiZCsZChk2cEdVchMynqcR2Rk70d4LuzUf9FSsJS5aWfIa4yZBnWZBtpW6Odso444lxTC1p5Vw6MxvRempY0lz7O4hnWaC0XIGoU1ZATpOcybpgQsdZA3iV7FSXBwiibF1cjZCzcEUI2WeOZCSy6m6qXX57BLN7qyWYIN8pzql2ieHfdLIOCoxlwmiUhEXNeqPgbktvgcD"
 PHONE_NUMBER_ID = "1071239746066018"
 VERIFY_TOKEN = "my_secret_token_123"
 
