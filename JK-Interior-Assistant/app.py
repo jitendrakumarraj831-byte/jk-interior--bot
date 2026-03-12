@@ -47,7 +47,7 @@ def webhook():
 
                 sender = message["from"]
 
-                reply = "नमस्ते! JK Interior में आपका स्वागत है। हम जल्द ही आपसे संपर्क करेंगे।"
+                from chatbot import get_response
 
                 send_whatsapp_message(sender, reply)
 
