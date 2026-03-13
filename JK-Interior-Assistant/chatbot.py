@@ -133,26 +133,15 @@ Aap hum se kya help chahte hain?
 Reply karein number ya apna sawaal likhein 👇"""
 
 
-def get_main_menu() -> str:
-    """Return the main menu."""
-    return """\
-━━━━━━━━━━━━━━━━━━━━━
-📋 *JK INTERIOR — MAIN MENU*
-━━━━━━━━━━━━━━━━━━━━━
+def get_thanks_message() -> str:
+    """Return thanks reply."""
+    return """
+😊 Aapka swagat hai!
 
-*1️⃣* — Hamari Services
-*2️⃣* — Price List / Rates
-*3️⃣* — Room Size Calculator
-*4️⃣* — Site Visit Booking
-*5️⃣* — Design Photos
-*6️⃣* — Contact & Location
-*7️⃣* — Material Quality
-*8️⃣* — Installation Time
-*9️⃣* — PVC vs Gypsum Comparison
-*0️⃣* — Direct Call / WhatsApp
+Agar aur koi sawal ho to pooch sakte hain.
 
-━━━━━━━━━━━━━━━━━━━━━
-Koi bhi number type karein ya seedha sawaal poochein 👇"""
+Ya *MENU* likh kar main options dekh sakte hain.
+"""
 
 
 # ---------------------------------------------------------------------------
