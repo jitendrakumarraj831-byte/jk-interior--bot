@@ -5,9 +5,13 @@ from chatbot import get_response
 
 app = Flask(__name__)
 
-ACCESS_TOKEN = "EAAMjzXE0bacBQzOZCozZB4CVIjTFt9n1g67vZBrvBpPzer4DHRoZCd672S1EIBCJdwXasuELGe70XveN6UAQx0hBzYWzwLiLQ18cpYXkKRWYln91UhZAasoFuJirwxuw1ZADEPLNz6ZAn4l96VA6rO1ca6TZAXuaPUZA7ZByRZCgIrack3MmQDQ5U1z7QNaV6uPuwLk27z9VoAYv70ZBO79KQzAyRPjD3BynHTbFq3gT3jEyDhYvxWVZB2sL8F4AWhd8LSuuIRmSfC2Sl6WflCdCJHF24"
+# Environment variables
+ACCESS_TOKEN = os.environ.get("EAAMjzXE0bacBQzOZCozZB4CVIjTFt9n1g67vZBrvBpPzer4DHRoZCd672S1EIBCJdwXasuELGe70XveN6UAQx0hBzYWzwLiLQ18cpYXkKRWYln91UhZAasoFuJirwxuw1ZADEPLNz6ZAn4l96VA6rO1ca6TZAXuaPUZA7ZByRZCgIrack3MmQDQ5U1z7QNaV6uPuwLk27z9VoAYv70ZBO79KQzAyRPjD3BynHTbFq3gT3jEyDhYvxWVZB2sL8F4AWhd8LSuuIRmSfC2Sl6WflCdCJHF24")
 PHONE_NUMBER_ID = "1071239746066018"
 VERIFY_TOKEN = "my_secret_token_123"
+
+# Duplicate message filter
+processed_messages = set()
 
 
 # WhatsApp message send function
@@ -27,7 +31,10 @@ def send_whatsapp_message(to, text):
         "text": {"body": text}
     }
 
-    requests.post(url, headers=headers, json=data)
+    response = requests.post(url, headers=headers, json=data)
+
+    # API response log
+    print("WhatsApp API Response:", response.text)
 
 
 # Webhook route
@@ -51,10 +58,18 @@ def webhook():
             if "messages" in value:
 
                 message = value["messages"][0]
+                message_id = message["id"]
+
+                # Duplicate message check
+                if message_id in processed_messages:
+                    return "duplicate", 200
+
+                processed_messages.add(message_id)
+
                 sender = message["from"]
 
                 # Only handle text messages
-                if message["type"] == "text":
+                if message.get("type") == "text":
 
                     user_message = message["text"]["body"]
 
