@@ -397,3 +397,5 @@ if __name__ == "__main__":
         logger.info("Starting %s WhatsApp bot on port %d", BUSINESS_NAME, port)
         app.run(host="0.0.0.0", port=port, debug=False)
     
+def get_response(user_input):
+    return build_reply(user_input)
