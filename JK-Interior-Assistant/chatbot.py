@@ -134,36 +134,42 @@ Reply karein number ya apna sawaal likhein 👇"""
 
 # MENU SYSTEM
 
-def get_thanks_message() -> str:
-    """Return thanks reply."""
-    return f"""
-🙂 Dhanyavaad!
+def get_main_menu() -> str:
+    """Return the main menu."""
+    return """\
+📋 *JK INTERIOR - MAIN MENU*
 
-*{BUSINESS_NAME}* se contact karne ke liye shukriya. 🙏
-Interior Design Expert — *{OWNER_NAME}*
+*1* - Hamari Services
+*2* - Price List / Rates
+*3* - Room Size Calculator
+*4* - Site Visit Booking
+*5* - Design Photos
+*6* - Contact & Location
+*7* - Material Quality
+*8* - Installation Time
+*9* - PVC vs Gypsum Comparison
+*0* - Direct Call / WhatsApp
 
-Agar aapko aur koi jankari chahiye to zaroor poochhein.
+Koi bhi number type karein ya seedha sawaal poochein 👇"""
 
-━━━━━━━━━━━━━━━━━━━━━
-📋 *MAIN MENU*
-━━━━━━━━━━━━━━━━━━━━━
+def calculate_room_price(length: float, width: float) -> str:
+    """Calculate price estimates for a given room size."""
+    sq_ft = length * width
+    # Aapka f-string yahan sahi kiya gaya hai
+    return f"""\
+*Room Size: {int(length)} x {int(width)} ft = {int(sq_ft)} sq ft*
 
-*1️⃣* — Hamari Services dekhein
-*2️⃣* — Price / Rate puchein
-*3️⃣* — Room Size Calculator (Quote)
-*4️⃣* — Site Visit Book karein
-*5️⃣* — Design Photos dekhein
-*6️⃣* — Contact / Location
-*7️⃣* — Material Quality Info
-*8️⃣* — Installation Time
-*9️⃣* — Comparison (PVC vs Gypsum)
-*0️⃣* — Seedha Call karein
+💰 *Estimated Price:*
+_________________________"""
 
-━━━━━━━━━━━━━━━━━━━━━
-Reply karein number ya apna sawaal likhein 👇
-"""
+def get_thanks_response() -> str:
+    """Thanks ka reply."""
+    return """\
+Ji, bahut bahut swagat hai aapka! 😊
 
-
+Kya main aapki kisi aur tarah se madad kar sakta hoon?
+Dobara menu dekhne ke liye kuch bhi type karein."""
+    
 # ---------------------------------------------------------------------------
 # PRICE & CALCULATOR
 # ---------------------------------------------------------------------------
