@@ -1,6 +1,6 @@
 flask
+gunicorn
+requests
 twilio
 gspread
 python-dotenv
-gunicorn
-
