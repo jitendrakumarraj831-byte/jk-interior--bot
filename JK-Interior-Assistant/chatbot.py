@@ -136,9 +136,10 @@ Reply karein number ya apna sawaal likhein 👇"""
 
 def get_thanks_message() -> str:
     """Return thanks reply."""
-    return f"""🙂 Dhanyavaad!
+    return f"""
+🙂 Dhanyavaad!
 
-*{BUSINESS_NAME}* se contact karne ke liye shukriya. 🙏  
+*{BUSINESS_NAME}* se contact karne ke liye shukriya. 🙏
 Interior Design Expert — *{OWNER_NAME}*
 
 Agar aapko aur koi jankari chahiye to zaroor poochhein.
@@ -159,7 +160,8 @@ Agar aapko aur koi jankari chahiye to zaroor poochhein.
 *0️⃣* — Seedha Call karein
 
 ━━━━━━━━━━━━━━━━━━━━━
-Reply karein number ya apna sawaal likhein 👇"""
+Reply karein number ya apna sawaal likhein 👇
+"""
 
 
 # ---------------------------------------------------------------------------
