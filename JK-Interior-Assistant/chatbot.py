@@ -1477,30 +1477,37 @@ def run_cli_demo():
         response = ResponseBuilder.build(test_phone, user_input)
         print(f"\nBOT:\n{response}\n")
         print("-"*60)
+        
+
+# ---------------------------------------------------------
+# Bridge function for app.py
+# ---------------------------------------------------------
+
+def get_response(user_input):
+    """
+    This function is used by app.py
+    It forwards the message to the existing ResponseBuilder system
+    """
+    test_phone = "whatsapp:+918651070831"
+    return ResponseBuilder.build(test_phone, user_input)
 
 
-# ---------------------------------------------------------------------------
+# ---------------------------------------------------------
 # MAIN
-# ---------------------------------------------------------------------------
+# ---------------------------------------------------------
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
 
-    if '--cli' in sys.argv or len(sys.argv) > 1 and sys.argv[1] == 'cli':
+    if '--cli' in sys.argv or (len(sys.argv) > 1 and sys.argv[1] == 'cli'):
         run_cli_demo()
     else:
         port = int(os.environ.get('PORT', 5000))
         debug = os.environ.get('FLASK_ENV') == 'development'
+
         print(f"\n🏠 {BUSINESS_NAME} WhatsApp Bot starting...")
-        print(f"📡 Running on port {port}")
-        print(f"🔗 Webhook URL: http://your-domain.com/webhook/whatsapp\n")
+        print(f"🚀 Running on port {port}")
+        print(f"🔗 Webhook URL: https://your-domain.com/webhook/whatsapp\n")
+
         app.run(host='0.0.0.0', port=port, debug=debug)
-
-# ------------------------------------------------------------------------
-# APP EXECUTION - Render 
-# ---------------------------------------------------------------------------
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
     
