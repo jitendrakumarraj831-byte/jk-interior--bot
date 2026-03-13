@@ -134,40 +134,32 @@ Reply karein number ya apna sawaal likhein 👇"""
 
 # MENU SYSTEM
 
-def get_welcome_message(name: Optional[str] = None) -> str:
-    greeting = f"Namaste {name}! 🙏" if name else "Namaste! 🙏"
-    return f"""{greeting}
-
-*JK INTERIOR* mein aapka swagat hai! ✨
-Interior Design ke Expert – *Jitendra Kumar*
-
-Aap hum se kya help chahte hain?
-
-📋 *MAIN MENU*
-
-*1* - Hamari Services dekhein
-*2* - Price / Rate puchhein
-*3* - Room Size Calculator (Quote)
-*4* - Site Visit Book karein
-*5* - Design Photos dekhein
-*6* - Contact / Location
-*7* - Material Quality Info
-*8* - Installation Time
-*9* - Comparison (PVC vs Gypsum)
-*0* - Seedha Call karein
-
-Reply karein number ya apna sawaal likhein 👇
-"""
-
-
 def get_thanks_message() -> str:
-    return """
-🙂 Aapka swagat hai!
+    """Return thanks reply."""
+    return f"""🙂 Dhanyavaad!
 
-Agar aur koi sawal ho to pooch sakte hain.
+*{BUSINESS_NAME}* se contact karne ke liye shukriya. 🙏  
+Interior Design Expert — *{OWNER_NAME}*
 
-Ya *MENU* likh kar main options dekh sakte hain.
-"""
+Agar aapko aur koi jankari chahiye to zaroor poochhein.
+
+━━━━━━━━━━━━━━━━━━━━━
+📋 *MAIN MENU*
+━━━━━━━━━━━━━━━━━━━━━
+
+*1️⃣* — Hamari Services dekhein
+*2️⃣* — Price / Rate puchein
+*3️⃣* — Room Size Calculator (Quote)
+*4️⃣* — Site Visit Book karein
+*5️⃣* — Design Photos dekhein
+*6️⃣* — Contact / Location
+*7️⃣* — Material Quality Info
+*8️⃣* — Installation Time
+*9️⃣* — Comparison (PVC vs Gypsum)
+*0️⃣* — Seedha Call karein
+
+━━━━━━━━━━━━━━━━━━━━━
+Reply karein number ya apna sawaal likhein 👇"""
 
 
 # ---------------------------------------------------------------------------
