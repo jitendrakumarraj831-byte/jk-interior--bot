@@ -132,11 +132,37 @@ Aap hum se kya help chahte hain?
 ━━━━━━━━━━━━━━━━━━━━━
 Reply karein number ya apna sawaal likhein 👇"""
 
+# MENU SYSTEM
+
+def get_welcome_message(name: Optional[str] = None) -> str:
+    greeting = f"Namaste {name}! 🙏" if name else "Namaste! 🙏"
+    return f"""{greeting}
+
+*JK INTERIOR* mein aapka swagat hai! ✨
+Interior Design ke Expert – *Jitendra Kumar*
+
+Aap hum se kya help chahte hain?
+
+📋 *MAIN MENU*
+
+*1* - Hamari Services dekhein
+*2* - Price / Rate puchhein
+*3* - Room Size Calculator (Quote)
+*4* - Site Visit Book karein
+*5* - Design Photos dekhein
+*6* - Contact / Location
+*7* - Material Quality Info
+*8* - Installation Time
+*9* - Comparison (PVC vs Gypsum)
+*0* - Seedha Call karein
+
+Reply karein number ya apna sawaal likhein 👇
+"""
+
 
 def get_thanks_message() -> str:
-    """Return thanks reply."""
     return """
-😊 Aapka swagat hai!
+🙂 Aapka swagat hai!
 
 Agar aur koi sawal ho to pooch sakte hain.
 
