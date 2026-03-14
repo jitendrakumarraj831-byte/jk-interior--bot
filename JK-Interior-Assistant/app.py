@@ -1,6 +1,6 @@
 import os
 import requests
-from flask import Flask, request
+from flask import Flask, request, Response
 from chatbot import get_response
 
 app = Flask(__name__)
